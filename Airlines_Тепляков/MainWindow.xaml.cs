@@ -30,13 +30,15 @@ namespace Airlines_Тепляков
 
         public enum pages
         {
-            main
+            main, ticket
         }
 
         public void OpenPages(pages _pages)
         {
             if (_pages == pages.main)
                 frame.Navigate(new Pages.Main());
+            if (_pages == pages.ticket)
+                frame.Navigate(new Pages.Ticket());
         }
     }
 }

@@ -16,23 +16,18 @@ using System.Windows.Shapes;
 namespace Airlines_Тепляков.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для Main.xaml
+    /// Логика взаимодействия для Ticket.xaml
     /// </summary>
-    public partial class Main : Page
+    public partial class Ticket : Page
     {
-        public Main()
+        public Ticket()
         {
             InitializeComponent();
         }
 
-        private void Exit(object sender, RoutedEventArgs e)
+        private void Back(object sender, RoutedEventArgs e)
         {
-            MainWindow.mainWindow.Close();
-        }
-
-        private void Search(object sender, RoutedEventArgs e)
-        {
-            MainWindow.mainWindow.OpenPages(MainWindow.pages.ticket);
+            MainWindow.mainWindow.OpenPages(MainWindow.pages.main);
         }
     }
 }
