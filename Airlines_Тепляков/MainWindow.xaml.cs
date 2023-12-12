@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Airlines_Тепляков.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,25 +21,18 @@ namespace Airlines_Тепляков
     /// </summary>
     public partial class MainWindow : Window
     {
+        public List<TicketClass> ticketsClasses = new List<TicketClass>();
         public static MainWindow mainWindow;
         public MainWindow()
         {
             InitializeComponent();
             mainWindow = this;
-            OpenPages(pages.main);
+            OpenPages(new Pages.Main());
         }
 
-        public enum pages
+        public void OpenPages(Page Page)
         {
-            main, ticket
-        }
-
-        public void OpenPages(pages _pages)
-        {
-            if (_pages == pages.main)
-                frame.Navigate(new Pages.Main());
-            if (_pages == pages.ticket)
-                frame.Navigate(new Pages.Ticket());
+            frame.Navigate(Page);
         }
     }
 }

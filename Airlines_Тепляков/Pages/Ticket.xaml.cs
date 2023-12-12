@@ -20,7 +20,7 @@ namespace Airlines_Тепляков.Pages
     /// </summary>
     public partial class Ticket : Page
     {
-        public Ticket()
+        public Ticket(string From, string To)
         {
             InitializeComponent();
             parrent.Children.Add(new Elements.Items());
@@ -28,7 +28,7 @@ namespace Airlines_Тепляков.Pages
 
         private void Back(object sender, RoutedEventArgs e)
         {
-            MainWindow.mainWindow.OpenPages(MainWindow.pages.main);
+            MainWindow.mainWindow.OpenPages(new Pages.Main());
         }
     }
 }
