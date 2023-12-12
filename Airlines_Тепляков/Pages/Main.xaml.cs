@@ -13,30 +13,26 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Airlines_Тепляков
+namespace Airlines_Тепляков.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Main.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Main : Page
     {
-        public static MainWindow mainWindow;
-        public MainWindow()
+        public Main()
         {
             InitializeComponent();
-            mainWindow = this;
-            OpenPages(pages.main);
         }
 
-        public enum pages
+        private void Exit(object sender, RoutedEventArgs e)
         {
-            main
+            MainWindow.mainWindow.Close();
         }
 
-        public void OpenPages(pages _pages)
+        private void Search(object sender, RoutedEventArgs e)
         {
-            if (_pages == pages.main)
-                frame.Navigate(new Pages.Main());
+
         }
     }
 }
