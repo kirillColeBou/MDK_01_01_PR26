@@ -13,22 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Airlines_Тепляков.Pages
+namespace Airlines_Тепляков.Elements
 {
     /// <summary>
-    /// Логика взаимодействия для Ticket.xaml
+    /// Логика взаимодействия для Items.xaml
     /// </summary>
-    public partial class Ticket : Page
+    public partial class Items : UserControl
     {
-        public Ticket()
+        public Items()
         {
             InitializeComponent();
-            parrent.Children.Add(new Elements.Items());
-        }
-
-        private void Back(object sender, RoutedEventArgs e)
-        {
-            MainWindow.mainWindow.OpenPages(MainWindow.pages.main);
         }
     }
 }

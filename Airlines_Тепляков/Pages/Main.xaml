@@ -21,7 +21,7 @@
             <TextBox Height="25" VerticalAlignment="Top" Margin="220,140,220,0"/>
             <Label Content="Куда:" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,170,0,0"/>
             <TextBox Height="25" VerticalAlignment="Top" Margin="220,200,220,0"/>
-            <Button Content="Найти" Background="#FF5C00" Foreground="White" FontWeight="Bold" Height="25" VerticalAlignment="Top" Margin="0,230,220,0" Click="Search" HorizontalAlignment="Right" Width="120"/>
+            <Button Content="Найти" Background="#FF5C00" Foreground="White" Height="25" VerticalAlignment="Top" Margin="0,230,220,0" Click="Search" HorizontalAlignment="Right" Width="120" BorderBrush="Black"/>
         </Grid>
     </Grid>
 </Page>
