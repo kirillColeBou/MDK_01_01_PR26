@@ -15,13 +15,17 @@
             <Button Content="Выход" Height="30" Width="120" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,25,10,0" Click="Exit"/>
         </Grid>
         <Grid Margin="0,80,0,0">
-            <Label Content="Поиск дешевых авиабилетов" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold" VerticalAlignment="Top" FontSize="24" Margin="0,27,0,0"/>
-            <Label Content="Лучший способ купить билеты дешево" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,80,0,0"/>
-            <Label Content="Откуда:" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,110,0,0"/>
-            <TextBox x:Name="from" Height="25" VerticalAlignment="Top" Margin="220,140,220,0"/>
-            <Label Content="Куда:" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,170,0,0"/>
-            <TextBox x:Name="to" Height="25" VerticalAlignment="Top" Margin="220,200,220,0"/>
-            <Button Content="Найти" Background="#FF5C00" Foreground="White" Height="25" VerticalAlignment="Top" Margin="0,230,220,0" Click="Search" HorizontalAlignment="Right" Width="120" BorderBrush="Black"/>
+            <Label Content="Поиск дешевых авиабилетов" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold" VerticalAlignment="Top" FontSize="24" Margin="0,17,0,0"/>
+            <Label Content="Лучший способ купить билеты дешево" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,70,0,0"/>
+            <Label Content="Откуда:" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,100,0,0"/>
+            <TextBox x:Name="from" Height="25" VerticalAlignment="Top" Margin="220,130,220,0"/>
+            <Label Content="Куда:" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,160,0,0"/>
+            <TextBox x:Name="to" Height="25" VerticalAlignment="Top" Margin="220,190,220,0"/>
+            <Label Content="Дата вылета (туда):" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,220,0,0"/>
+            <DatePicker x:Name="date" Height="25" VerticalAlignment="Top" Margin="220,250,220,0"/>
+            <Label Content="Дата вылета (обратно):" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,280,0,0"/>
+            <DatePicker x:Name="date_back" Height="25" VerticalAlignment="Top" Margin="220,310,220,0"/>
+            <Button Content="Найти" Background="#FF5C00" Foreground="White" Height="25" VerticalAlignment="Top" Margin="0,340,220,0" Click="Search" HorizontalAlignment="Right" Width="120" BorderBrush="Black"/>
         </Grid>
     </Grid>
 </Page>
