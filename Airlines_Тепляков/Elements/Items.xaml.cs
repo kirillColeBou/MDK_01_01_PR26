@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Airlines_Тепляков.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,22 @@ namespace Airlines_Тепляков.Elements
     /// </summary>
     public partial class Items : UserControl
     {
-        public Items()
+        public Items(TicketContext item)
         {
             InitializeComponent();
+            IPrice.Content = item.price + " ₽";
+            fromTime.Content = item.time_start.ToString("HH:mm");
+            IFrom.Content = item.from;
+            fromDate.Content = item.time_start.ToString("MM.dd.yyyy");
+            toTime.Content = item.time_end.ToString("HH:mm");
+            ITo.Content = item.to;
+            toDate.Content = item.time_end.ToString("MM.dd.yyyy");
+            TimeSpan tS = item.time_end.Subtract(item.time_start);
+            string hours = tS.Hours.ToString();
+            string minute = tS.Minutes.ToString();
+            if(tS.Hours < 10) hours = "0" + hours;
+            if(tS.Minutes < 10) minute = "0" + minute;
+            time_way.Content = "В пути: " + hours + "ч. " + minute + "мин.";
         }
     }
 }

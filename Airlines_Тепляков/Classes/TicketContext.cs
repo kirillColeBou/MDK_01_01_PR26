@@ -9,7 +9,7 @@ namespace Airlines_Тепляков.Classes
 {
     public class TicketContext : TicketClass
     {
-        public TicketContext(int price, string from, string to, DateTime time_start, DateTime time_way) : base(price, from, to, time_start, time_way) { }
+        public TicketContext(int price, string from, string to, DateTime time_start, DateTime time_end) : base(price, from, to, time_start, time_end) { }
         public static List<TicketContext> AllTickets()
         {
             List<TicketContext> allTickets = new List<TicketContext>();
