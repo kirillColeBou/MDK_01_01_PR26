@@ -1,4 +1,5 @@
 ﻿using Airlines_Тепляков.Classes;
+using Airlines_Тепляков.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,3 +53,26 @@ namespace Airlines_Тепляков.Pages
         }
     }
 }
+
+
+//public Ticket(string From, string To, string Date, string Date_Back)
+//{
+//    InitializeComponent();
+//    AllTickets = TicketContext.AllTickets().FindAll(x =>
+//    (x.from == From && To == "" && Date == "" && Date_Back == "") ||
+//    (From == "" && x.to == To && Date == "" && Date_Back == "") ||
+//    (x.from == From && x.to == To && Date == "" && Date_Back == "") ||
+//    (x.from == From && To == "" && x.time_start.ToString("MM.dd.yyyy") == Convert.ToDateTime(Date).ToString("dd.MM.yyyy") && Date_Back == "") ||
+//    (From == "" && x.to == To && x.time_start.ToString("MM.dd.yyyy") == Convert.ToDateTime(Date).ToString("dd.MM.yyyy") && Date_Back == "") ||
+//    (x.from == From && x.to == To && x.time_start.ToString("MM.dd.yyyy") == Convert.ToDateTime(Date).ToString("dd.MM.yyyy") && Date_Back == "") ||
+//    (From == "" && To == "" && x.time_start.ToString("MM.dd.yyyy") == Convert.ToDateTime(Date).ToString("dd.MM.yyyy") && Date_Back == "") ||
+//    (From == "" && To == "" && Date == "" && x.time_start_back.ToString("MM.dd.yyyy") == Convert.ToDateTime(Date_Back).ToString("dd.MM.yyyy")) ||
+//    (From == "" && To == "" && x.time_start.ToString("MM.dd.yyyy") == Convert.ToDateTime(Date).ToString("dd.MM.yyyy") && x.time_start_back.ToString("MM.dd.yyyy") == Convert.ToDateTime(Date_Back).ToString("dd.MM.yyyy")) ||
+//    (x.from == From && To == "" && Date == "" && x.time_start_back.ToString("MM.dd.yyyy") == Convert.ToDateTime(Date_Back).ToString("dd.MM.yyyy")) ||
+//    (From == "" && x.to == To && Date == "" && x.time_start_back.ToString("MM.dd.yyyy") == Convert.ToDateTime(Date_Back).ToString("dd.MM.yyyy")) ||
+//    (x.from == From && x.to == To && Date == "" && x.time_start_back.ToString("MM.dd.yyyy") == Convert.ToDateTime(Date_Back).ToString("dd.MM.yyyy")) ||
+//    (x.from == From && To == "" && x.time_start.ToString("MM.dd.yyyy") == Convert.ToDateTime(Date).ToString("dd.MM.yyyy") && x.time_start_back.ToString("MM.dd.yyyy") == Convert.ToDateTime(Date_Back).ToString("dd.MM.yyyy")) ||
+//    (From == "" && x.to == To && x.time_start.ToString("MM.dd.yyyy") == Convert.ToDateTime(Date).ToString("dd.MM.yyyy") && x.time_start_back.ToString("MM.dd.yyyy") == Convert.ToDateTime(Date_Back).ToString("dd.MM.yyyy")) ||
+//    (x.from == From && x.to == To && x.time_start.ToString("MM.dd.yyyy") == Convert.ToDateTime(Date).ToString("dd.MM.yyyy") && x.time_start_back.ToString("MM.dd.yyyy") == Convert.ToDateTime(Date_Back).ToString("dd.MM.yyyy")));
+//    CreateUI();
+//}
