@@ -22,12 +22,20 @@ namespace Airlines_Тепляков.Pages
     public partial class Ticket : Page
     {
         public List<TicketContext> AllTickets;
-        public Ticket(string From, string To)
+        public Ticket(string From, string To, string Date, string Date_Back)
         {
             InitializeComponent();
-            AllTickets = TicketContext.AllTickets().FindAll(x => (x.from == From && To == "") || (From == "" && x.to == To) || (x.from == From && x.to == To));
+            DateTime date = String.IsNullOrEmpty(Date) ? DateTime.MinValue : Convert.ToDateTime(Date);
+            DateTime dateBack = String.IsNullOrEmpty(Date_Back) ? DateTime.MinValue : Convert.ToDateTime(Date_Back);
+            AllTickets = TicketContext.AllTickets().FindAll(x =>
+                (x.from == From || String.IsNullOrEmpty(From)) &&
+                (x.to == To || String.IsNullOrEmpty(To)) &&
+                (x.time_start.Date == date.Date || date == DateTime.MinValue) &&
+                (x.time_start_back.Date == dateBack.Date || dateBack == DateTime.MinValue)
+            );
             CreateUI();
         }
+
 
         public void CreateUI()
         {

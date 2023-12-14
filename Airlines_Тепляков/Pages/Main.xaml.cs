@@ -32,7 +32,16 @@ namespace Airlines_Тепляков.Pages
 
         private void Search(object sender, RoutedEventArgs e)
         {
-            MainWindow.mainWindow.OpenPages(new Pages.Ticket(from.Text, to.Text, date.SelectedDate, date_back.SelectedDate));
+            string date_text = date.Text; 
+            string date_text_back = date_back.Text;
+            if (date.Text == "" && date_back.Text == "")
+                MainWindow.mainWindow.OpenPages(new Pages.Ticket(from.Text, to.Text, "", ""));
+            if (date.Text != "" && date_back.Text == "")
+                MainWindow.mainWindow.OpenPages(new Pages.Ticket(from.Text, to.Text, date_text, "")); 
+            if (date.Text == "" && date_back.Text != "")
+                MainWindow.mainWindow.OpenPages(new Pages.Ticket(from.Text, to.Text, "", date_text_back));
+            if (date.Text != "" && date_back.Text != "")
+                MainWindow.mainWindow.OpenPages(new Pages.Ticket(from.Text, to.Text, date_text, date_text_back));
         }
     }
 }
